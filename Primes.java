@@ -21,7 +21,12 @@ public class Primes {
                 primeCount++;
             }
         }
-         System.out.println("There are " + primeCount + " primes...");
+         double percentage = ((double)primeCount / n) * 100.0;
+        
+        int roundedPercentage = (int)Math.round(percentage);
+
+        System.out.println("There are " + primeCount + " primes between 2 and " + n + 
+                           " (" + roundedPercentage + "% are primes)");
     }
     
     public static boolean isPrime(int number) {
