@@ -160,11 +160,11 @@ public class ArrCharOps {
             return -2;}
 
         for (int i=0; i<Math.min(str1.length(), str2.length()); i++) {
-            str1=str1.toLowerCase();
-            str2=str2.toLowerCase();
-            if (str1.charAt(i) < str2.charAt(i)) {
+            char char1 = Character.toLowerCase(str1.charAt(i));
+            char char2 = Character.toLowerCase(str2.charAt(i));
+            if (char1 < char2) {
                 return -1;}
-            else if (str1.charAt(i) > str2.charAt(i)) {
+            else if (char1 > char2) {
                 return 1;}}
         if (str1.length() < str2.length()){
             return -1;}
